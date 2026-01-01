@@ -1,0 +1,56 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: #34495e;
+}
+
+.Box{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 30%;
+	left:45%;
+	transform: translate(-50px, -50px);
+	background: #191919;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.Box h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500px;
+}
+
+.But{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.50px;
+}
+
+.Button{
+		border: 0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.5s;
+	cursor: pointer;
+
+}

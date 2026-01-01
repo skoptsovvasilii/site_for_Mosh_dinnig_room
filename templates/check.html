@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='check_style.css') }}">
+</head>
+<body>
+    <div class="hat">
+                	<form action="{{ url_for('index') }}" method="post">
+        <input class="back" type="submit" name="like" value="<">
+            </form>
+        <div class="al"><h1>На что у тебя аллергия есть?</h1></div>
+        <div class="wo"><h1>Какие у тебя есть предпочтения?</h1></div>
+        <div class="w"></div>
+
+    </div>
+
+    <!-- ОДНА форма на всю страницу -->
+    <form method="post" action="{{ url_for('check') }}">
+        <div class="check">
+            <div class="pus"></div>
+
+            <!-- Левая колонка: аллергия -->
+            <div class="alerg">
+                <h1><input type="checkbox" name="allergy" value="fish"> Рыба</h1>
+                <h1><input type="checkbox" name="allergy" value="chic"> Курица</h1>
+                <h1><input type="checkbox" name="allergy" value="meat"> Мясо</h1>
+                <h1><input type="checkbox" name="allergy" value="milk"> Молоко</h1>
+                <h1><input type="checkbox" name="allergy" value="citr"> Цитрус</h1>
+                <h1><input type="checkbox" name="allergy" value="saxa"> Сахар</h1>
+            </div>
+
+            <!-- Правая колонка: предпочтения -->
+            <div class="wont">
+                <h1><input type="checkbox" name="preference" value="fish"> Рыба</h1>
+                <h1><input type="checkbox" name="preference" value="chic"> Курица</h1>
+                <h1><input type="checkbox" name="preference" value="meat"> Мясо</h1>
+                <h1><input type="checkbox" name="preference" value="milk"> Молоко</h1>
+                <h1><input type="checkbox" name="preference" value="citr"> Цитрус</h1>
+                <h1><input type="checkbox" name="preference" value="saxa"> Сахар</h1>
+            </div>
+
+            <!-- Красная область с результатом -->
+            <div class="pus1">
+                <div class="result">
+                    {{ result_text | safe }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка внутри той же формы -->
+        <div class="But">
+            <button class="but" type="submit">Ответить</button>
+        </div>
+    </form>
+</body>
+</html>

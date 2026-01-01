@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main_program</title>
+<link rel="stylesheet" href="/static/index_style.css"></head>
+<body>
+
+<div class="main">
+    <h1>Здравствуй ученик, {{ name }}!</h1>
+    <form method="post" action="{{ url_for('input_danes') }}">
+    <input class="back" type="submit" name="like" value="выход">
+    </form>
+</div>
+
+
+<div class="up_t">
+    <h1>МЕНЮ</h1>
+    <h1>{{ pay }}</h1>
+</div>
+
+<div class="sec">
+    <div class="free">
+        <h1>Оставьте отзыв о наших блюдах или посмотрите отзывы других учащихся</h1>
+    <input class="like" type="submit" name="like" value="Отзывы">
+    </div>
+
+
+    <form method="post">
+
+    <input class="l_b" type="submit" name="like" value="<">
+        </form>
+
+    <table class="tab">
+    <tr>
+        <td> </td>
+        <td>Завтрак</td>
+        <td>Обед</td>
+    </tr>
+    <tr>
+        <td>1     </td>
+        <td>гречка</td>
+        <td>суп</td>
+    </tr>
+        <tr>
+        <td>2</td>
+        <td>котлеты</td>
+        <td>компот</td>
+    </tr>
+        <tr>
+        <td>3</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+         <tr>
+        <td>4</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+         <tr>
+        <td>5</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+         <tr>
+        <td>6</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+         <tr>
+        <td>7</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+         <tr>
+        <td>8</td>
+        <td>чай</td>
+        <td>картофель</td>
+    </tr>
+
+    </table>
+
+
+
+    <form method="post">
+    <input class="r_b" type="submit" name="like" value=">">
+    </form>
+
+    <div class="free1">
+        <h1>вы можете оплатить разово питание или приобрести абонемент</h1>
+            <form action="{{ url_for('pay') }}" method="post" >
+        <input class="pay" type="submit" name="like" value="Купить">
+            </form>
+    </div>
+
+</div>
+
+<div class="zero">
+    <h1> </h1>
+</div>
+{% if eat is none %}
+<div class="check">
+    <h1>Вы сегодня поели в нашей столовой?</h1>
+</div>
+
+<div class="check1">
+    <div class="g"></div>
+    <form method="POST">
+    <input class="yes" type="submit" name="like" value="V">
+    </form>
+    <form method="POST">
+    <input class="no" type="submit" name="like" value="X">
+    </form>
+    <div class="g2">
+    </div>
+    <div class="g1">
+        <h1>Если у вас есть какие-либо аллергии или пожелания выберите их!</h1>
+                <form method="post">
+
+        <input class="fo" type="submit" name="like" value="Выбрать">
+                    </form>
+    </div>
+
+</div>
+{% endif %}
+{% if eat is not none %}
+<div class="ans">
+    <h1>{{ eat }}</h1>
+</div>
+<div class="check2">
+    <div class="g3"></div>
+    <div class="g4">
+        <h1>Если у вас есть какие-либо аллергии или пожелания выберите их!</h1>
+        <form method="post">
+        <input class="fo" type="submit" name="like" value="Выбрать">
+        </form>
+    </div>
+    </div>
+
+{% endif %}
+</body>
+</html>

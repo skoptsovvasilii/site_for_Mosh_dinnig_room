@@ -1,0 +1,134 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: white;
+}
+
+.hat {
+	justify-content: space-between;
+	background: red;
+	display: flex;
+		font-size: 1.0em;
+
+}
+
+
+
+.hat h1{
+	color: white;
+	width: 90%;
+	text-align: center;
+	margin-right: 50px;
+}
+
+.price{
+	justify-content: space-between;
+	display: flex;
+	margin-top: 50px;
+}
+
+.f{
+	margin-left: 10px;
+	background: red;
+	text-align: center;
+		color: white;
+
+	width: 30%;
+	border-radius: 50px;
+
+}
+
+.s{
+	background: red;
+	text-align: center;
+	width: 30%;
+		color: white;
+
+	border-radius: 50px;
+
+}
+
+.t{
+	margin-right: 10px;
+	color: white;
+	background: red;
+	text-align: center;
+	width: 30%;
+	border-radius: 50px;
+
+}
+
+.but{
+	justify-content: space-between;
+	display: flex;
+	margin-top: 20px;
+}
+
+.f11{
+	width: 30%;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+.f1 {
+	background: red;
+	border-radius: 25px;
+	width: 150px;
+	height: 60px;
+	color: white;
+	font-size: 1.5em;
+}
+
+
+.s11 {
+		width: 30%;
+			margin-top: 20px;
+
+	text-align: center;
+}
+
+
+.s1 {
+	background: red;
+		border-radius: 25px;
+	font-size: 1.5em;
+
+	width: 150px;
+	height: 60px;
+	color: white;
+}
+
+.t11 {
+		margin-top: 20px;
+
+		width: 30%;
+	text-align: center;
+}
+
+.t1 {
+	background: red;
+	font-size: 1.5em;
+	width: 150px;
+	height: 60px;
+		border-radius: 25px;
+
+	color: white;
+
+}
+
+.mes{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+	background: red;
+}
+
+.back{
+	width: 50px;
+	height: 50px;
+	background: red;
+	color: white;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pay</title>
+    <link rel="stylesheet" href="/static/pay_style.css">
+</head>
+<body>
+
+<div class="hat">
+    <form class="b" action="{{ url_for('index') }}">
+    <input class="back" type="submit" name="like" value="<">
+        </form>
+    <h1>Закажи еду</h1>
+</div>
+<div class="price">
+    <div class="f">
+        <h1>Один день</h1>
+        <h1>1_000 рублей</h1>
+    </div>
+    <div class="s">
+        <h1>Одна неделя</h1>
+        <h1>5_000 рублей</h1>
+    </div>
+    <div class="t">
+        <h1>Один месяц</h1>
+        <h1>15_000 рублей</h1>
+    </div>
+</div>
+
+<div class="but">
+    <form class="f11" method="post">
+        <input class="f1" name="like" type="submit" value="Заказать">
+    </form>
+    <form class="s11" method="post">
+        <input class="s1" name="like" type="submit" value="Заказать ">
+    </form>
+    <form class="t11" method="post">
+        <input class="t1" name="like" type="submit" value=" Заказать">
+    </form>
+</div>
+<div class="mes">
+    <h1>у вас заказано питание до {{ mes }}</h1>
+</div>
+</body>
+</html>
