@@ -62,8 +62,8 @@ body {
 
 
 .pu_b{
-	justify-content: space-between;
-	display: flex;
+	width: 100%;
+	text-align: center;
 }
 
 
@@ -81,5 +81,22 @@ body {
 	width: 150px;
 	height: 50px;
 	text-align: center;
+}
+
+.r h1{
+	text-align: center;
+}
+
+.texts{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+border: 2px solid red;	
+padding-left:10px ;
+padding-right: 20px;
 
 }
+
+
+
+

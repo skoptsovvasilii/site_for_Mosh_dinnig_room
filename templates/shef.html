@@ -9,13 +9,100 @@
 
 <div class="hat">
     <h1>Здравствуй, шеф!</h1>
+        <form method="post" action="{{ url_for('input_danes') }}">
+    <input class="back" type="submit" name="like" value="выход">
+    </form>
 </div>
-<div class="search">
+            <form method="post" class="search">
+
     <div class="inp">
-    <input class="sear" type="search" name="like" placeholder="Введи Фамилию и Имя через пробел">
+    <input class="sear" type="search" name="name" placeholder="Введи Фамилию">
     </div>
     <input class="but" type="submit" name="like" value="Поиск">
+            </form>
+
+{% if flag==1 %}
+<div class="check">
+    <h1>{{ full_name }} сегодня получил еду?</h1>
 </div>
+<div class="hid">
+    <div class="g"></div>
+        <form method="POST" >
+    <input class="yes" type="submit" name="like" value="V">
+    </form>
+    <form method="POST">
+    <input class="no" type="submit" name="like" value="X">
+    </form>
+        <div class="g1"></div>
+
+</div>
+
+{% elif flag == 123 %}
+<div class="ask">
+    <h1> {{ mes }} </h1>
+</div>
+
+{% endif %}
+
+<div class="reds">
+<h1>готовых блюд осталось {{ cn }}</h1>
+</div>
+
+<div class="order">
+    <h1>Заказать продукты</h1>
+</div>
+        <form method="POST">
+
+<div class="choose">
+    <div>
+    <h1>Мокровь</h1>
+    <input type="number" placeholder="сколько кг" name="curret" >
+</div>
+<div>
+    <h1>картошка</h1>
+    <input type="number" placeholder="сколько кг" name="pottat">
+    </div>
+        <div>
+    <h1>яблоко</h1>
+    <input type="number" placeholder="сколько кг" name="apple">
+</div>
+<div>
+    <h1>мясо</h1>
+    <input type="number" placeholder="сколько кг" name="meat">
+    </div>
+        <div>
+    <h1>рыба</h1>
+    <input type="number" placeholder="сколько кг" name="fish">
+</div>
+
+</div>
+<div class="choose">
+    <div>
+    <h1>лук</h1>
+    <input type="number" placeholder="сколько кг" name="ion">
+</div>
+<div>
+    <h1>помидор</h1>
+    <input type="number" placeholder="сколько кг" name="tomate">
+    </div>
+        <div>
+    <h1>курица</h1>
+    <input type="number" placeholder="сколько кг" name="check">
+</div>
+<div>
+    <h1>огурец</h1>
+    <input type="number" placeholder="сколько кг" name="cucamber">
+    </div>
+        <div>
+    <h1>груша</h1>
+    <input type="number" placeholder="сколько кг" name="cirle_app">
+</div>
+</div>
+
+<div class="send">
+    <input class="s" type="submit" name=like value="Заказать">
+</div>
+</form>
 
 </body>
 </html>

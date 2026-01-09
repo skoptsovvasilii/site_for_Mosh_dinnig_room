@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Регистрация-авторизация</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='admin_style.css') }}">
+
+</head>
+<body>
+
+
+<div class="main">
+    <h1>Здравствуй админ!</h1>
+    <form method="post" action="{{ url_for('input_danes') }}">
+    <input class="back" type="submit" name="like" value="выход">
+    </form>
+</div>
+
+
+<h1></h1>
+<div class="t">
+<table class="tab">
+    <tr>
+        <td> Статистика </td>
+        <td>месяц назад</td>
+        <td>в этом месяце</td>
+    </tr>
+    <tr>
+        <td>Пропущено</td>
+        <td>{{zl}}</td>
+        <td>{{z}}</td>
+    </tr>
+    <tr>
+        <td>Посещено</td>
+        <td>{{gol}}</td>
+        <td>{{go}}</td>
+    </tr>
+    <tr>
+        <td>Сумма</td>
+        <td>{{pa}}</td>
+        <td>{{pays}}</td>
+    </tr>
+</table>
+</div>
+{% if fl  %}
+<div class="order">
+    <h1>Повар отправил заявку на закупку</h1>
+    {% for row in lst %}
+        <h1>{{ row[0] }} - {{ row[1] }} кг</h1>
+    {% endfor %}
+    <div class="Buts">
+    <form method="post" class="win">
+    <input type="submit" value="Согласовать" name="like" class="but">
+    <input type="submit" value="Не согласовать" name="like" class="but1">
+    </form>
+    </div>
+</div>
+{% endif %}
+
+<div class="tabel1">
+    <h1>Сформировать отчет за месяц</h1>
+    <div class="ot">
+<table class="tab1">
+    <tr>
+        <td> сколько людей посетило завтрак </td>
+        <td><input type="number" name="like"></td>
+        <td> сколько людей посетило обед</td>
+        <td> <input type="number" name="like"> </td>
+    </tr>
+    <tr>
+            <td> сколько людей пропустило завтрак</td>
+        <td> <input type="number" name="like"> </td>
+        <td> сколько людей пропустило обед</td>
+        <td> <input type="number" name="like"> </td>
+    </tr>
+    <tr>
+        <td> какая прибыль</td>
+        <td> <input type="number" name="like"> </td>
+        <td> сколько затрат</td>
+        <td> <input type="number" name="like"> </td>
+    </tr>
+    <tr>
+        <td> какие и сколько продуктов было заказано</td>
+            <td colspan="3"> <textarea name="coment" placeholder="пример: рыба - 5кг; ..." required></textarea></td>
+    </tr>
+        <tr>
+        <td> сколько было завтраков</td>
+        <td> <input type="number" name="like"> </td>
+        <td> сколько было обедов</td>
+        <td> <input type="number" name="like"> </td>
+    </tr>
+</table>
+
+</div>
+
+
+</div>
+<div class="dont">
+    <form method="post">
+        <div class="down-container">
+            <input class='down' type="submit" value="Отправить" name="like">
+        </div>
+    </form>
+</div>
+</body>
+</html>

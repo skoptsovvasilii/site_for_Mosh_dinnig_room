@@ -86,13 +86,30 @@ body {
 }
 
 
-.tab {
-    border: 7px solid red; /* толщину в пикселях */
-    width: 30%;
-    margin: 0 auto; /* центрирование */
-    font-size: 1.5em; /* нормальный размер шрифта */
-}
-
+table.tab {
+            border-collapse: collapse;
+            width: 50%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            background-color: white;
+            margin: auto;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
 .l_b {
     color: white;
     text-align: center;

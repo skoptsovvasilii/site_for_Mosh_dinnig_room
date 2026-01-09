@@ -46,3 +46,126 @@ body {
 	margin: 40px auto;
 }
 
+
+
+
+.check{
+	text-align: center;
+}
+
+.hid{
+	justify-content: space-between;
+	display: flex;
+}
+
+
+.g{
+	width: 25%;
+}
+.g1{
+	width: 25%;
+}
+
+.yes{
+	width: 50px;
+	height: 50px;
+	background: green;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+.no{
+	width: 50px;
+	height: 50px;
+	background: red;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.back {
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 1.5em;
+	background: red;
+	margin-left: 20px;
+}
+
+
+.ask {
+		justify-content: space-between;
+	display: flex;
+}
+
+.ask h1{
+	width: 100%;
+		text-align: center;
+
+}
+
+
+.order {
+		justify-content: space-between;
+	display: flex;
+
+}
+
+.order h1{
+	width: 100%;
+	color: white;
+	background: red;
+	text-align: center;
+}
+
+
+.choose{
+
+			justify-content: space-between;
+	display: flex;
+	text-align: center;
+
+}
+
+
+.send {
+				justify-content: space-between;
+				justify-content: center; 
+	display: flex;
+	margin-top: 20px;
+}
+
+.send s{
+	width: 100%;
+}
+
+.send input[type='submit']{
+			
+
+	background: red;
+	color: white;
+	text-align: center;
+	width: 150px;
+	height: 50px;
+	border-radius: 25px;
+}
+
+
+
+.reds{
+    text-align: center;
+    
+    margin-top: 20px;
+}
+
+.reds h1{
+    margin: auto;
+    width: 500px;
+    background: red;
+    border-radius: 50px;
+    height: 50px;
+    color: white;
+
+}

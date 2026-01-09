@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: white;
+}
+
+
+
+.main {
+  justify-content: space-between;
+  background: red;
+  display: flex;
+}
+
+.back{
+    background: red;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100px;
+  height: 50px;
+  margin: 40px auto;
+}
+
+
+.main h1{
+  width:100%;
+  color: white;
+  text-align: center;
+}
+
+
+table.tab {
+            border-collapse: collapse;
+            width: 50%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            background-color: white;
+            margin: auto;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+.order {
+    text-align: center;
+    width: 100%;
+}
+
+
+.Buts{
+      justify-content: space-between;
+  display: flex;
+}
+
+.win{
+    width: 100%;
+}
+
+.but {
+    background: red;
+    color: white;
+    width: 200px;
+    height: 50px;
+      font-size: 1.5em;
+
+}
+
+.but1{    background: red;
+    color: white;
+    width: 200px;
+    height: 50px;
+      font-size: 1.5em;
+}
+
+.tabel1{
+    margin: auto;
+}
+
+.tab1{
+    margin: auto;
+}
+
+.tabel1 h1{
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.dont {
+        padding-top: 20px;
+
+    display: flex;
+    justify-content: center; /* теперь центр по горизонтали */
+}
+
+.down-container { /* добавляем контейнер для вашей кнопки */
+    margin: auto; /* центруем внутренний элемент */
+}
+
+.down {
+    background: red;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    width: 150px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+

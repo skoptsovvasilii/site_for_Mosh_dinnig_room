@@ -36,51 +36,20 @@
         </form>
 
     <table class="tab">
+
     <tr>
         <td> </td>
         <td>Завтрак</td>
         <td>Обед</td>
     </tr>
+                {% for row in br %}
+
     <tr>
-        <td>1     </td>
-        <td>гречка</td>
-        <td>суп</td>
-    </tr>
-        <tr>
-        <td>2</td>
-        <td>котлеты</td>
-        <td>компот</td>
-    </tr>
-        <tr>
-        <td>3</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
-         <tr>
-        <td>4</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
-         <tr>
-        <td>5</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
-         <tr>
-        <td>6</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
-         <tr>
-        <td>7</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
-         <tr>
-        <td>8</td>
-        <td>чай</td>
-        <td>картофель</td>
-    </tr>
+        <td>{{ row[0] }}     </td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+
+    {% endfor %}
 
     </table>
 

@@ -12,15 +12,26 @@
     </form>
     <h1>Оставь отзыв о наших блюдах</h1>
 </div>
+    <form method="POST">
+
 <div class="com">
-<textarea name="comment" placeholder="Напишите ваш комментарий здесь..." required></textarea>
+<textarea name="coment" placeholder="Напишите ваш комментарий здесь..." required></textarea>
 </div>
 
 <div class="pu_b">
-    <div class="a"></div>
-    <form class="b" method="post">
   <input class="push" type="submit" name="like" value="Отправить">
+</div>
         </form>
+
+<div class="r">
+        <h1>Отзывы других пользователей</h1>
+    {% for row in lst %}
+    <div class="texts">
+        <h1>{{ row }}</h1>
+        </div>
+            <h1></h1>
+
+    {% endfor %}
 </div>
 
 </body>

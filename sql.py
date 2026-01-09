@@ -132,10 +132,10 @@ conn.close()
 '''
 
 import sqlite3
-"""
-#conect = sqlite3.connect("database/data_students.db")
-cur = conect.cursor()
 
+conect = sqlite3.connect("database/data_students.db")
+cur = conect.cursor()
+"""
 cur.execute('''
     CREATE TABLE users(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -157,7 +157,7 @@ conect.commit()
 
 """
 
-
+"""
 cur.execute('''
     CREATE TABLE (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -170,3 +170,17 @@ cur.execute('''
     balance REAL DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP)
 ''')
+
+
+cur.execute('''
+    CREATE TABLE eat(
+    eat TEXT NOT NULL)
+''')
+conect.commit()
+
+"""
+
+
+
+'''cur.execute("INSERT INTO users (full_name, login, password_hash, role) VALUES ('admin', '6', '6', 'администратор')")
+conect.commit()'''

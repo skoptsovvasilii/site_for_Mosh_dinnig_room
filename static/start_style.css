@@ -5,11 +5,21 @@ body {
 	background: #34495e;
 }
 
+
+.a{
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
+.a h1{
+color: red;
+}
+
 .Button {
 	border: 0;
 	background: none;
 	display: block;
-	margin: 20px auto ;
+	margin: auto ;
 	text-align: center;
 	border: 2px solid #2ecc71;
 	padding: 14px 40px;
@@ -21,7 +31,7 @@ body {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 45%;
 }
 
 
