@@ -132,3 +132,47 @@ body {
 	background: red;
 	color: white;
 }
+
+
+
+.pa {
+    margin: 60px auto 40px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.pa h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.in {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.custom-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.custom-button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    width: 80%;
+    max-width: 400px;
+}
