@@ -42,5 +42,13 @@
 <div class="mes">
     <h1>у вас заказано питание до {{ mes }}</h1>
 </div>
+
+<div class="payment-custom">
+    <h2>Или пополнить баланс на произвольную сумму</h2>
+    <form class="custom-form" method="post">
+        <input class="custom-input" type="number" placeholder="Введи сумму" name="total" min="1" required>
+        <button class="custom-button" type="submit">Пополнить</button>
+    </form>
+</div>
 </body>
 </html>

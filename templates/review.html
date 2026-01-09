@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>review</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='review_style.css') }}">
+</head>
+<body>
+<div class="hat">
+    <form class="op" action="{{ url_for('index') }}" method="get">
+    <input class="back" type="submit" name="like" value="<">
+    </form>
+    <h1>Оставь отзыв о наших блюдах</h1>
+</div>
+<div class="com">
+<textarea name="comment" placeholder="Напишите ваш комментарий здесь..." required></textarea>
+</div>
+
+<div class="pu_b">
+    <div class="a"></div>
+    <form class="b" method="post">
+  <input class="push" type="submit" name="like" value="Отправить">
+        </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: white;
+}
+
+
+
+.hat {
+	justify-content: space-between;
+	display: flex;
+	background: red;
+}
+
+.hat h1{
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	margin-right: 50px;
+	
+
+}
+
+.op{
+	width: 20%;
+}
+
+.back{
+	width: 50px;
+	height: 50px;
+	background: red;
+	color: white;
+	font-size: 1.5em;
+}
+
+.com {
+    width: 800px;
+    max-width: 90%;
+    margin: 40px auto;        /* центрирует блок */
+    text-align: center;
+}
+
+.com textarea {
+    width: 800px;             /* фиксированная ширина */
+    height: 300px;            /* фиксированная высота (под большой текст) */
+    padding: 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;   /* важно: padding не увеличивает размер */
+    
+    resize: none;             /* ← КЛЮЧЕВОЕ СВОЙСТВО: запрещает изменение размера */
+    
+    /* Опционально: убираем полосу прокрутки по умолчанию и делаем красивую */
+    overflow-y: auto;         /* появляется только когда текст не помещается */
+}
+
+
+
+
+.pu_b{
+	justify-content: space-between;
+	display: flex;
+}
+
+
+
+
+
+.b{
+    margin: 40px auto;        /* центрирует блок */
+
+}
+
+.push {
+	background: red;
+	color: white;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+
+}

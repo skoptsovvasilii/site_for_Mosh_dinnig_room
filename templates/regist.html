@@ -9,14 +9,17 @@
 <body>
 	<div class="rec" >
 		<h1>Регистрация</h1>
-		<input class="But" type="text" name="" placeholder="Имя">
-		<input class="But" type="text" name="" placeholder="Фамилия">
-		<input class="But" type="text" name="" placeholder="Отчество">
-		<input class="But" type="password" name="" placeholder="почта">
-		<input class="But" type="password" name="" placeholder="Пароль">
-	<form action="{{ url_for('regist') }}">
-		<input class="button" type="submit" name="" placeholder="Зарегистрироваться">
+		<form action="{{ url_for('regist') }}" method="post">
+		<input class="But" type="text" name="name" placeholder="Имя">
+		<input class="But" type="text" name="text" placeholder="Фамилия">
+		<input class="But" type="text" name="text" placeholder="Отчество">
+		<input class="But" type="password" name="email" placeholder="почта">
+		<input class="But" type="password" name="password" placeholder="Пароль">
+		<input class="button" type="submit" name="like" placeholder="Зарегистрироваться">
 	</form>
+		{% if error %}
+			<h1 style="color: red;">{{ error }}</h1>
+		{% endif %}
 </div>
 
 </body>

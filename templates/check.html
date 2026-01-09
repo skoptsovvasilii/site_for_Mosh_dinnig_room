@@ -6,53 +6,53 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='check_style.css') }}">
 </head>
 <body>
-    <div class="hat">
-                	<form action="{{ url_for('index') }}" method="post">
-        <input class="back" type="submit" name="like" value="<">
-            </form>
-        <div class="al"><h1>На что у тебя аллергия есть?</h1></div>
-        <div class="wo"><h1>Какие у тебя есть предпочтения?</h1></div>
-        <div class="w"></div>
 
+<div class="hat">
+    <form action="{{ url_for('index') }}" method="get">
+        <input class="back" type="submit" value="<">
+    </form>
+    <div class="al"><h1>На что у тебя аллергия?</h1></div>
+    <div class="wo"><h1>Какие у тебя предпочтения?</h1></div>
+</div>
+
+<form method="post" action="{{ url_for('check') }}" class="main-form">
+
+<div class="check">
+
+    <!-- Аллергии -->
+    <div class="alerg">
+        <h1><input type="checkbox" name="allergy" value="fish" {% if 'fish' in allergies_list %}checked{% endif %}> Рыба</h1>
+        <h1><input type="checkbox" name="allergy" value="chic" {% if 'chic' in allergies_list %}checked{% endif %}> Курица</h1>
+        <h1><input type="checkbox" name="allergy" value="meat" {% if 'meat' in allergies_list %}checked{% endif %}> Мясо</h1>
+        <h1><input type="checkbox" name="allergy" value="milk" {% if 'milk' in allergies_list %}checked{% endif %}> Молоко</h1>
+        <h1><input type="checkbox" name="allergy" value="citr" {% if 'citr' in allergies_list %}checked{% endif %}> Цитрус</h1>
+        <h1><input type="checkbox" name="allergy" value="saxa" {% if 'saxa' in allergies_list %}checked{% endif %}> Сахар</h1>
     </div>
 
-    <!-- ОДНА форма на всю страницу -->
-    <form method="post" action="{{ url_for('check') }}">
-        <div class="check">
-            <div class="pus"></div>
+    <!-- Предпочтения -->
+    <div class="wont">
+        <h1><input type="checkbox" name="preference" value="fish" {% if 'fish' in preferences_list %}checked{% endif %}> Рыба</h1>
+        <h1><input type="checkbox" name="preference" value="chic" {% if 'chic' in preferences_list %}checked{% endif %}> Курица</h1>
+        <h1><input type="checkbox" name="preference" value="meat" {% if 'meat' in preferences_list %}checked{% endif %}> Мясо</h1>
+        <h1><input type="checkbox" name="preference" value="milk" {% if 'milk' in preferences_list %}checked{% endif %}> Молоко</h1>
+        <h1><input type="checkbox" name="preference" value="citr" {% if 'citr' in preferences_list %}checked{% endif %}> Цитрус</h1>
+        <h1><input type="checkbox" name="preference" value="saxa" {% if 'saxa' in preferences_list %}checked{% endif %}> Сахар</h1>
+    </div>
 
-            <!-- Левая колонка: аллергия -->
-            <div class="alerg">
-                <h1><input type="checkbox" name="allergy" value="fish"> Рыба</h1>
-                <h1><input type="checkbox" name="allergy" value="chic"> Курица</h1>
-                <h1><input type="checkbox" name="allergy" value="meat"> Мясо</h1>
-                <h1><input type="checkbox" name="allergy" value="milk"> Молоко</h1>
-                <h1><input type="checkbox" name="allergy" value="citr"> Цитрус</h1>
-                <h1><input type="checkbox" name="allergy" value="saxa"> Сахар</h1>
-            </div>
-
-            <!-- Правая колонка: предпочтения -->
-            <div class="wont">
-                <h1><input type="checkbox" name="preference" value="fish"> Рыба</h1>
-                <h1><input type="checkbox" name="preference" value="chic"> Курица</h1>
-                <h1><input type="checkbox" name="preference" value="meat"> Мясо</h1>
-                <h1><input type="checkbox" name="preference" value="milk"> Молоко</h1>
-                <h1><input type="checkbox" name="preference" value="citr"> Цитрус</h1>
-                <h1><input type="checkbox" name="preference" value="saxa"> Сахар</h1>
-            </div>
-
-            <!-- Красная область с результатом -->
-            <div class="pus1">
-                <div class="result">
-                    {{ result_text | safe }}
-                </div>
-            </div>
+    <!-- Красный блок -->
+    <div class="pus1">
+        <div class="result">
+            {{ result_text }}
         </div>
+    </div>
 
-        <!-- Кнопка внутри той же формы -->
-        <div class="But">
-            <button class="but" type="submit">Ответить</button>
-        </div>
-    </form>
+</div>
+
+<div class="But">
+    <button class="but" type="submit">Ответить</button>
+</div>
+
+</form>
+
 </body>
 </html>

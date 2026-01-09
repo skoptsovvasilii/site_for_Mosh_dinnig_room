@@ -21,8 +21,12 @@
 
 <div class="sec">
     <div class="free">
+        <form method="post" action="review">
         <h1>Оставьте отзыв о наших блюдах или посмотрите отзывы других учащихся</h1>
+        </form>
+	<form action="{{ url_for('review') }}" method="get">
     <input class="like" type="submit" name="like" value="Отзывы">
+    </form>
     </div>
 
 
