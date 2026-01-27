@@ -1,10 +1,11 @@
 <h1 align="center">МОШ Предпроффесиональная олимпиада кейс №2 про столовую</h1>
 
-<p align="center">A school research project about medical AI and patient monitoring 🩺</p>
+<p align="center">Профиль «Информационные технологии»
+Командный кейс № 2 «Управление столовой»</p>
 
 ---
 
-## 👋 Hello!
+## Инструкция по установке
 
 This project was created by me for school and city science conferences.  
 **Health-AI** is an autonomous system that monitors a patient’s condition during surgery using:
