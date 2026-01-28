@@ -6,6 +6,12 @@
 ---
 
 ## Инструкция по установке
+Скачайте все файлы папки, разместите их в таком же расположении(файлы в этих директивах должны лежать)
+установите на питон библиотеку flask  
+можно воспользоваться команой pip install flask
+и запустите питон файл  chek_email_password
+
+
 
 This project was created by me for school and city science conferences.  
 **Health-AI** is an autonomous system that monitors a patient’s condition during surgery using:
