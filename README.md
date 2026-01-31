@@ -48,8 +48,8 @@ This is Web app. Student can log in or sign up there. They can view the menu, pa
 ---
 
 ## 🛠️ Installation Instructions
-<h1>You have to download all files and folders and arrange them in the same order.</h1>
-<h1>Install on Puthon Flask.</h1>
+You have to download all files and folders and arrange them in the same order.
+Install on Puthon Flask.
 You can make that some command: pip install flask.
 And You need start files - chek_email_password.
 
