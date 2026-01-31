@@ -1,3 +1,7 @@
+<h1 align="center">Русская версия</h1>
+
+
+---
 <h1 align="center">🏆 МОШ Предпроффесиональная олимпиада кейс №2 про столовую</h1>
 
 <p align="center">Профиль «Информационные технологии»
@@ -39,7 +43,7 @@
 ---
 
 ## 📋 Description
-This is Wep app. Student can log in or sign up there. They can view the menu, pay for breakfast and lunch, write reviews, mark the allergig reaction or preference. You can sing up to sheff(5,  - login and password). He can find any student and mark Attendance and he can check foods and send there to admin. Yoy can sind up to admin(6, 6 - login and password). He can view statics in table and make some report about school's dinning room.
+This is Web app. Student can log in or sign up there. They can view the menu, pay for breakfast and lunch, write reviews, mark the allergig reaction or preference. You can sing up to sheff(5,  - login and password). He can find any student and mark Attendance and he can check foods and send there to admin. Yoy can sind up to admin(6, 6 - login and password). He can view statics in table and make some report about school's dinning room.
 
 ---
 
