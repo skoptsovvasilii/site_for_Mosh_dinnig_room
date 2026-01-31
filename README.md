@@ -28,7 +28,7 @@
 
 ---
 
-<h1 align="center">English version/h1>
+<h1 align="center">English version</h1>
 
 
 ---
