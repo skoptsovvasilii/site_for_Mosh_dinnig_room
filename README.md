@@ -26,3 +26,36 @@
 
 <p align="center">🙂  2025-2026, авторы - Скопцов Василий, Сибилев Никита, ученики школы №626 10 класс</p>
 
+---
+
+<h1 align="center">English version/h1>
+
+
+---
+<h1 align="center">🏆 MOSH predprofessional olympiad Case №2 about the schools' dinning room</h1>
+
+<p align="center">Profile: information Technology Team case №2% "dinning room Management"</p>
+
+---
+
+## 📋 Description
+This is Wep app. Student can log in or sign up there. They can view the menu, pay for breakfast and lunch, write reviews, mark the allergig reaction or preference. You can sing up to sheff(5,  - login and password). He can find any student and mark Attendance and he can check foods and send there to admin. Yoy can sind up to admin(6, 6 - login and password). He can view statics in table and make some report about school's dinning room.
+
+---
+
+## 🛠️ Installation Instructions
+You have to download all files and folders and arrange them in the same order
+Install on Puthon Flask
+You can make that some command: pip install flask
+And You need start files - chek_email_password.
+
+---
+
+## 🎥 video
+
+You can watch my video by link: 
+
+---
+
+<p align="center">🙂  2025-2026, The authors - Скопцов Василий, Сибилев Никита, students school №626 10 class</p>
+
