@@ -38,7 +38,7 @@
 ---
 <h1 align="center">🏆 MOSH predprofessional olympiad Case №2 about the schools' dinning room</h1>
 
-<p align="center">Profile: information Technology Team case №2% "dinning room Management"</p>
+<p align="center">Profile: information Technology Team case №2: "dinning room Management"</p>
 
 ---
 
