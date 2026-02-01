@@ -1,8 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import*
 from flask import Flask, render_template, request, redirect, url_for, session
-
+import hashlib
 import sqlite3
+
+def hahs(input_password):
+    input_hashed_password = hashlib.sha256(input_password.encode()).hexdigest()
+    return input_hashed_password
+
+print(hahs(('5')))
+print(hahs(('6')))
+
 
 app = Flask(__name__)
 app.secret_key = '26a5d8bc12a7e9f635b1d5c982a4d8eb'
@@ -12,7 +20,6 @@ app.secret_key = '26a5d8bc12a7e9f635b1d5c982a4d8eb'
 RIGHT_EMAIL = "1"
 RIGHT_PASSWORD = "1"
 email_shef='2'
-password_shef='2'
 name = 'василий'
 do_you_eat = None
 @app.route("/")
@@ -24,14 +31,18 @@ def start():
 def input_danes():
     session.pop('id', None)
     error = None
-    print("Запрос пришел:", request.method)  # этот принт должен сработать всегда
+    print("Запрос пришел:", request.method)
     conect = sqlite3.connect("database/data_students.db")
     cur = conect.cursor()
     if request.method == "POST":
         if request.method == "POST":
             email = request.form.get("email")
             password = request.form.get("password")
+
             print(f"Получено: email={email}, password={password}")
+            if  password != None:
+                password = hahs(password)
+            print(password, "хэшированный")
             cur.execute("SELECT password_hash, role, id FROM users WHERE login = ?", (email,))
             res = cur.fetchall()
             print(res)
@@ -63,16 +74,19 @@ import sqlite3
 
 @app.route('/regist', methods=["GET", "POST"])
 def regist():
-    error = None  # Локальная переменная, не global!
+    error = None
 
-    # Создаём соединение внутри функции
     conn = sqlite3.connect("database/data_students.db")
     cur = conn.cursor()
 
     if request.method == "POST":
         email = request.form.get("email")
         password = request.form.get("password")
+        password = hahs(password)
+
         name = request.form.get("name")
+        #
+
         print(name, password, email)
 
         if not email or not password or not name:
@@ -82,22 +96,19 @@ def regist():
             cur.execute("SELECT id FROM users WHERE login = ?", (email,))
             x = cur.fetchone()
             print(x)
-            if x:  # Если найдено — логин занят
+            if x:
                 error = "Данный логин занят"
             else:
-                # Хэшируем пароль
                 password_hash = password
-                # Добавляем пользователя
                 cur.execute(
                     'INSERT INTO users (full_name, login, password_hash, role) VALUES (?, ?, ?, ?)',
                     (name, email, password_hash, "ученик")
                 )
                 conn.commit()
                 conn.close()
-                return redirect(url_for('input_danes'))  # Успешная регистрация
+                return redirect(url_for('input_danes'))
 
-    # Если GET или ошибка — показываем форму
-    conn.close()  # Закрываем в любом случае
+    conn.close()
     return render_template("regist.html", error=error)
 
 @app.route('/shef', methods=["GET", "POST"])
@@ -277,6 +288,7 @@ def index():
 
         cur1.execute("SELECT * FROM eat_check WHERE id = ? ORDER BY date ASC", (id_man,))
         results = cur1.fetchall()
+        print(results, " - result answer")
         dt = datetime.now()
         print(dt)
         x1=None
@@ -378,6 +390,36 @@ def index():
     cr.execute("SELECT breakfast, lunch FROM menu WHERE day = ?", (weekday_number,))
     et = cr.fetchall()
     print(et[0][0].split(","))
+    wont_that = {
+        "рыба": [
+            ["котлета рыбная", "рыба лук"],
+            ["сырники со сгущенным молоком"]
+        ],
+        "курица": [
+            ["суп вермишель курица", "котлеты куриные", "суп куриный", 'лапша домашняя курица', "суп куриный сухарики"],
+            ["гречневая каша"]
+        ],
+        "мясо": [
+            ["гуляш свинина гречка", "биточки мясные макароны", "телятина картофель",
+             "суфле мясо", "котлета рыбная паровая", "говядина в щах", "свинина в гуляше"],
+            ["яблоко свежее"]
+        ],
+        "молоко": [
+            ["творожники сметана", "сырники сгущёнка", "вареники творог",
+             "йогурт", "рис молоко", "кефир", "кукурузные хлопья йогурт", 'творог мёд орехи', 'ватрушка творог'],
+            ["винегрет овощной"]
+        ],
+        "цитрус": [
+            ["чай лимон", "сок апельсин", "лимонад апельсин"],
+            ["компот яблочный"]
+        ],
+        "сахар": [
+            ["компот яблочный", "хлебцы джем", "пирожки капуста", "миндаль", "халва подсолнечник"],
+            ["картофель отварной с растительным маслом"]
+        ]
+    }
+
+
     allergy_replacements = {
         "рыба": [
             ["котлета рыбная", "рыба лук"],
@@ -440,7 +482,6 @@ def index():
 
 
 
-        # === текст в красном блоке ===
         print(allergies_db)
         if allergies_db is not None:
             for h in allergies_db.split(','):
@@ -464,8 +505,11 @@ def index():
 
 
 
-
-
+        if wont_db is not None and br[0][1]!="-":
+            wont_db = wont_db.split(',')
+            dat = date.today().day
+            dish = wont_that[wont_db[int(dat)%len(wont_db)].lower()][0][0]
+            br[int(dat)%8][int(dat)%2+1] = dish
 
 
 
@@ -681,6 +725,7 @@ def admin():
             if action=='Не согласовать':
                 cur12.execute("UPDATE eat SET check1 = 1 WHERE eat=?", (cn1, ))
                 conect2.commit()
+
     print(flag)
 
 
