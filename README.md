@@ -25,7 +25,7 @@
 
 ## 🎥 видеоролик
 
-Видео ролик с тестом по регламенту доступен по ссылке: 
+Видео ролик с тестом по регламенту доступен по ссылке: https://rutube.ru/video/private/a097ab78f2fa3286770bb9a72296b44c/?p=04swM6drUg2r6pmR1YDY8g
 
 ---
 
@@ -58,7 +58,7 @@ And You need start files - chek_email_password.
 
 ## 🎥 video
 
-You can watch my video by link: 
+You can watch my video by link: https://rutube.ru/video/private/a097ab78f2fa3286770bb9a72296b44c/?p=04swM6drUg2r6pmR1YDY8g
 
 ---
 
