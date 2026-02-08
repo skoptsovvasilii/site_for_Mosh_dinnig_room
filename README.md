@@ -16,10 +16,9 @@
 
 ## 🛠️ Инструкция по установке
 1. Скачайте все файлы и папки
-2. запустите питон файл chek_email_password
-3. в открывшемся терминале нажмите на ссылку(если не запускается то вставьте ее в браузер)
-4. если возникает ошибка установить питон файл(если не установлен) или установите на питон библиотеку flask  
-можно воспользоваться команой pip install flask
+2. В любом приложение для питон (Pycharm и тд.) перенесите все туда эти папки и файлы в новый проект и установите все библиотеки при помощи команды install -r requirements.txt
+3. Запустите питон файл chek_email_password.py
+4. В терминале появится ссылка нажмите на нее и Вы попадете на наш сайт
 
 ---
 
@@ -49,10 +48,11 @@ This is Web app. Student can log in or sign up there. They can view the menu, pa
 ---
 
 ## 🛠️ Installation Instructions
-You have to download all files and folders and arrange them in the same order.
-Install on Puthon Flask.
-You can make that some command: pip install flask.
-And You need start files - chek_email_password.
+1. You have to doenloads all files and dolders
+2. You have to next downloads any programms for python (Pycharm) and move all files and folders there in new project and install all libraries with command -r requirements.txt
+3. run the file chek_email_password.py
+4. link will appear in terminal and you have to click to it and then you get our web app.
+
 
 ---
 
